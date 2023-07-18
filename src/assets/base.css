@@ -1,0 +1,332 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #ebeef5;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  --vt-c-black: #03001e;
+  --vt-c-black-soft: #222222;
+  --vt-c-black-mute: #282828;
+
+  --vt-c-indigo: #2c3e50;
+
+  --vt-c-primary: #7367f5;
+  --vt-c-primary-light: #ddd9fa;
+
+  --vt-c-primary-dark: #03001e;
+  --vt-c-primary-dark-light: #ebeef5;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-dark-1: var(--vt-c-white);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+  --vt-c-primary-button-text: var(--vt-c-white);
+
+  --vt-c-primary-button-shadow: rgba(115, 103, 245, 0.65);
+  --vt-c-primary-button-shadow-dark: rgba(8, 1, 74, 0.65);
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --section-gap: 160px;
+
+  --color-primary: var(--vt-c-primary);
+  --color-primary-light: var(--vt-c-primary-light);
+  --color-primary-button-border: var(--vt-c-primary);
+  --color-primary-button-text: var(--vt-c-primary-button-text);
+  --color-primary-button-shadow: var(--vt-c-primary-button-shadow);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--vt-c-black);
+    --color-background-soft: var(--vt-c-black-soft);
+    --color-background-mute: var(--vt-c-black-mute);
+
+    --color-border: var(--vt-c-divider-dark-2);
+    --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: var(--vt-c-text-dark-2);
+
+    --color-primary: var(--vt-c-primary-dark);
+    --color-primary-light: var(--vt-c-primary-dark-light);
+
+    --color-primary-button-border: var(--vt-c-primary-dark);
+    --color-primary-button-text: var(--vt-c-primary-button-text);
+    --color-primary-button-shadow: var(--vt-c-primary-button-shadow-dark);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  /* background: var(--color-background); */
+  /* background: rgb(8,1,74);
+  background: linear-gradient(225deg, rgba(8,1,74,1) 5%, rgba(115,103,245,1) 40%, rgba(235,238,245,1) 100%); */
+
+  background: #03001e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    45deg,
+    #fdeff9,
+    #ec38bc,
+    #7303c0,
+    #03001e
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    45deg,
+    #fdeff9,
+    #ec38bc,
+    #7303c0,
+    #03001e
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fusion-cosmic {
+  background: #ff00cc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    45deg,
+    var(--color-primary),
+    #ff00cc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    45deg,
+    var(--color-primary),
+    #ff00cc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.fusion-cosmic-btn {
+  background: #ff00cc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    225deg,
+    var(--color-primary),
+    #ff00cc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    225deg,
+    var(--color-primary),
+    #ff00cc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.fusion-cosmic-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 30px 45px -15px linear-gradient(2255deg, var(--color-primary), #ff00cc);
+  border-color: linear-gradient(2255deg, var(--color-primary), #ff00cc) !important;
+}
+
+.left-login-color {
+  color: #fdeff9 !important;
+}
+
+.right-login-color {
+  color: var(--color-primary) !important;
+}
+
+.right-line-color {
+  border-right-color: #fdeff9 !important;
+}
+
+.line-color {
+  border-color: #fdeff9;
+}
+
+.text-color-primary {
+  color: var(--color-primary);
+}
+
+.text-color-second {
+  color: #ff00cc !important;
+}
+
+.text-color-third {
+  color: #03001e !important;
+}
+
+.login-container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.card {
+  min-width: 300px;
+  min-height: 300px;
+  padding: 20px;
+  line-height: 20px;
+  /* background: var(--color-background); */
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid var(--color-background);
+}
+.opacity-2 {
+  opacity: 0.2;
+}
+
+.border-none {
+  border: none !important;
+}
+
+.card-header {
+  font-size: 2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  height: 50px;
+  bottom: 0 !important;
+}
+
+.card-header span {
+  color: var(--color-primary);
+  font-weight: 700;
+  align-items: flex-start !important;
+}
+
+.card-header span:first-child {
+  padding-right: 20px;
+  padding-left: 20px;
+  flex: 0.6;
+  line-height: 30px;
+  border-right: 5px solid var(--color-primary-button-border);
+}
+.card-header span:last-child {
+  padding-right: 20px;
+}
+
+.header-containt {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  height: 50px;
+  bottom: 0 !important;
+  width: 100%;
+}
+
+.inputBox-container {
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+  margin: 10px;
+  gap: 10px;
+  padding: 1%;
+}
+
+.inputBox-input {
+  padding: 5px;
+  width: 100%;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 2px solid var(--color-primary-light);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  line-height: 1.1rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.inputBox-input:focus {
+  border: 2px solid var(--color-primary);
+}
+
+.inputBox-lable {
+  text-decoration: solid;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.card-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+}
+
+.primary-button {
+  cursor: pointer;
+  width: fit-content;
+  height: auto;
+  font-size: 1.2rem;
+  padding: 5px 30px;
+  background-color: var(--color-primary);
+  color: var(--color-primary-button-text);
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.1.5s;
+  border-radius: 10px;
+}
+
+.primary-button-border {
+  border: 2px solid var(--color-primary-button-border);
+}
+
+.primary-text {
+  color: var(--color-primary);
+}
+
+.primary-text-light {
+  color: var(--color-primary-light);
+}
+
+.primary-background {
+  background: var(--color-primary);
+}
+
+.primary-background-light {
+  background: var(--color-background);
+}
+
+.primary-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 30px 45px -15px var(--color-primary-button-shadow);
+}
