@@ -23,6 +23,7 @@ import Utils from '../../helpers/Utils'
       :type="props.type"
       :name="props.name"
       :id="props.name"
+      :ref="props.name"
       :placeholder="$t(Utils.getKey(props.placeholder))"
       :class="props.inputClass != '' ? props.inputClass : 'inputBox-input'"
       :required="props.required == 1 ? required : ''"

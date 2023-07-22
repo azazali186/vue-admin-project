@@ -10,7 +10,7 @@ import axios from "axios";
 
 const api = axios.create({
   headers: { "X-Requested-With": "XMLHttpRequest", Accept: "application/json" },
-  baseURL: import.meta.env.API_URL,
+  baseURL: "https://api.azazali.in/api/admin",
   withCredentials: true,
 });
 
