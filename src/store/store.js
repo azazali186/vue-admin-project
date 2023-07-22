@@ -31,7 +31,7 @@ export const store = reactive({
   ]
 })
 
-const state = reactive({
+export const state = reactive({
   loggedIn: false,
   user: null,
   token: null,
