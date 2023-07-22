@@ -1,9 +1,11 @@
+<!-- eslint-disable @typescript-eslint/no-unused-vars -->
+<!-- eslint-disable vue/no-parsing-error -->
 <template>
   <main class="login-container">
     <div class="card border-none p-2">
       <div class="card fusion-cosmic">
       <div class="card-header"><div class="header-containt">
-        <span class="left-login-color right-line-color">Welcome</span><span class="left-login-color">Login</span>
+        <span class="left-login-color right-line-color">{{ $t(Utils.getKey("Welcome")) }}</span><span class="left-login-color">{{ $t(Utils.getKey("login")) }}</span>
       </div></div>
       <div class="card-body">
         <InputBox
@@ -35,6 +37,7 @@
 <script setup lang="ts">
 import InputBox from '@/components/common/InputBox.vue'
 import ButtonBox from '@/components/common/ButtonBox.vue'
+import Utils from '@/helpers/Utils'
 
 const login = () => {
   console.log('hello Login')

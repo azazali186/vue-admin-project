@@ -1,0 +1,10 @@
+{
+    "welcome": "Welcome",
+    "login": "Login",
+    "email": "Email",
+    "passord": "Password",
+    "enter_your_email":"Enter your email",
+    "enter_your_password": "Enter your password",
+    "email__":"Email :",
+    "password__":"Password :"
+}

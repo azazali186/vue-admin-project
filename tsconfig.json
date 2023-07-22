@@ -13,5 +13,10 @@
     {
       "path": "./nightwatch/tsconfig.json"
     }
-  ]
+  ],
+  "compilerOptions": {
+    "types": [
+      "vue3-toastify/global"
+    ]
+  }
 }

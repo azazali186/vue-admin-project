@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const props = defineProps(['name', 'onclickFunction', 'styleclasses'])
+import Utils from '../../helpers/Utils'
 </script>
 
 <template>
@@ -8,8 +9,7 @@ const props = defineProps(['name', 'onclickFunction', 'styleclasses'])
       type="button"
       :class="props.styleclasses != '' ? props.styleclasses : 'primary-button'"
       :onClick="props.onclickFunction"
-    >
-      {{ props.name }}
+    >{{ $t(Utils.getKey(props.name)) }}
     </button>
   </div>
 </template>

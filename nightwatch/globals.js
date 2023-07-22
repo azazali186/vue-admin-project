@@ -1,7 +1,8 @@
+/* eslint-disable no-undef */
 const waitOn = require('wait-on')
 const { setup, teardown } = require('@nightwatch/vue')
 
-const serverPort = process.env.CI ? '4173' : '5173'
+const serverPort = import.meta.env.CI ? '4173' : '5173'
 
 module.exports = {
   before(done) {

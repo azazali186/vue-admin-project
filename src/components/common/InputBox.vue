@@ -8,6 +8,7 @@ const props = defineProps([
   'headingClass',
   'inputClass'
 ])
+import Utils from '../../helpers/Utils'
 </script>
 
 <template>
@@ -16,13 +17,13 @@ const props = defineProps([
       :for="props.name"
       :name="props.lableName"
       :class="props.headingClass != '' ? props.headingClass : 'inputBox-lable'"
-      >{{ props.lableName }}</lable
+      >{{ $t(Utils.getKey(props.lableName)) }}</lable
     >
     <input
       :type="props.type"
       :name="props.name"
       :id="props.name"
-      :placeholder="props.placeholder"
+      :placeholder="$t(Utils.getKey(props.placeholder))"
       :class="props.inputClass != '' ? props.inputClass : 'inputBox-input'"
       :required="props.required == 1 ? required : ''"
       autocomplete="off"
