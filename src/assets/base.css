@@ -223,16 +223,16 @@ body {
   align-items: flex-start !important;
 }
 
-.card-header span:first-child {
+/* .card-header span:first-child {
   padding-right: 20px;
   padding-left: 20px;
   flex: 0.6;
-  line-height: 30px;
+  line-height: 20px;
   border-right: 5px solid var(--color-primary-button-border);
 }
 .card-header span:last-child {
   padding-right: 20px;
-}
+} */
 
 .header-containt {
   width: 100%;
@@ -329,4 +329,12 @@ body {
 .primary-button:hover {
   transform: scale(1.05);
   box-shadow: 0 30px 45px -15px var(--color-primary-button-shadow);
+}
+
+.logo-image{
+  width: 300px;
+}
+
+.logo-image > img{
+  width: 100%;
 }
